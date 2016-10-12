@@ -6,6 +6,9 @@
 .bar {
   fill: steelblue;
 }
+.bartext{
+   fill: black;	
+}
 
 .bar:hover {
   fill: brown;
@@ -83,6 +86,7 @@ d3.csv("data.csv", function(d) {
             .attr("x", function(d) { return x(d.age)+45; })
             .attr("y", function(d) { return y(d.population)-10; })
             .attr("text-anchor", "middle")
+            .attr('class', 'bartext')
 	    .text(function(d){ return Math.round(d.population/1000000 *10)/10 + 'M'; });
   
 });
