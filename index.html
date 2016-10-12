@@ -43,7 +43,7 @@ d3.csv("data.csv", function(d) {
 
   x.domain(data.map(function(d) { return d.age; }));
   y.domain([0, d3.max(data, function(d) { return d.population; })]);
-  x.range([1,400]);
+  x.range([1,800]);
 
   g.append("g")
       .attr("class", "axis axis--x")
