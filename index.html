@@ -83,6 +83,7 @@ d3.csv("data.csv", function(d) {
             .attr("x", function(d) { return x(d.age)+10; })
             .attr("y", function(d) { return y(d.population)-10; })
             .attr("text-anchor", "middle")
+	    .attr("text-anchor", "middle")
 	    .text(function(d){ return d.population/1000000; });
   
 });
