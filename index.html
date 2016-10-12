@@ -74,7 +74,12 @@ d3.csv("data.csv", function(d) {
       .attr("x", function(d) { return x(d.age); })
       .attr("y", function(d) { return y(d.population); })
       .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.population); });
+      .attr("height", function(d) { return height - y(d.population); })
+  //Create the frequency labels above the rectangles.
+        .append("text").text(function(d){ return d3.format(",")(d[1])})
+            .attr("x", function(d) { return x(d[0])+x.rangeBand()/2; })
+            .attr("y", function(d) { return y(d[1])-5; })
+            .attr("text-anchor", "middle");;
 });
 
 </script>
