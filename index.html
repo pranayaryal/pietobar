@@ -80,7 +80,6 @@ d3.csv("data.csv", function(d) {
 	
 	//Create the frequency labels above the rectangles.
         bars.append("text")
-		attr("class", "bar")
             .attr("x", function(d) { return x(d.age)+10; })
             .attr("y", function(d) { return y(d.population)-10; })
             .attr("text-anchor", "middle")
